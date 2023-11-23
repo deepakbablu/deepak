@@ -1,0 +1,21 @@
+
+---
+- hosts: nginxWeb
+  become: yes
+
+  roles:
+  - nginx
+
+- hosts: flasKApp
+  become: yes
+
+  roles:
+  - flask
+
+- hosts: mysqlDB
+  become: yes
+
+  roles:
+  - mysql
+
+...
